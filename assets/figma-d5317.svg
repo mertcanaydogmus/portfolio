@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="72.3474" height="95.5758" viewBox="0 0 72.3474 95.5758" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Vector" filter="url(#filter0_i_0_26)">
+<path d="M15.4102 19.055C7.3232 13.5143 11.4043 2.0212 20.1644 0.229908C24.5061 -0.657839 28.2898 1.04089 30.4615 5.05586C37.4961 2.72677 43.7755 2.58507 50.5645 6.00925C52.8815 7.18695 55.0131 8.69838 56.8924 10.4953C59.0307 8.84419 60.9802 8.04697 63.7616 8.38854C66.2523 8.69637 68.5192 9.98548 70.0561 11.9699C71.8703 14.3158 72.6554 17.6004 72.2378 20.5175C71.5512 25.3003 69.1507 27.5981 64.6386 28.8375C65.3603 36.5773 63.2003 41.9462 57.3568 46.9438C63.6831 52.5449 67.5269 59.1065 68.2536 67.6778C68.5042 70.6409 67.7558 74.2348 65.7879 76.5914C64.9142 77.6387 62.7726 78.2045 62.4285 78.518C61.2658 85.3354 58.7483 88.229 53.112 92.3574C51.1959 93.7607 48.6284 95.107 46.1978 95.2773C43.3846 96.3814 38.034 94.2491 36.5622 91.7295C35.5065 89.9231 35.164 88.9188 34.4808 87.0095C31.6693 86.5348 31.1514 86.9485 28.0042 85.8408C24.9488 87.8552 18.362 91.9702 14.8689 92.3116C2.58896 94.5306 -5.22905 75.6338 4.13252 69.7096C0.869998 61.4646 11.862 48.2849 18.524 44.1745C17.0974 42.7996 15.7443 41.5485 14.7102 39.8322C10.873 33.4678 12.3782 25.3892 15.4102 19.055Z" fill="#ECC28B"/>
+</g>
+<defs>
+<filter id="filter0_i_0_26" x="-3.6663" y="0" width="76.0137" height="99.2421" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="-3.6663" dy="3.6663"/>
+<feGaussianBlur stdDeviation="6.55351"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.882692 0 0 0 0 0.580161 0 0 0 0 0.345438 0 0 0 0.51 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_0_26"/>
+</filter>
+</defs>
+</svg>
