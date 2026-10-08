@@ -7,7 +7,7 @@
 <title>Portfolio — Mertcan Aydoğmuş</title>
 <link rel="preload" href="assets/poppins-200.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="styles.css">
-<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="portfolio-theme.css">
 <script>
 if (document.fonts) {
   document.documentElement.classList.add('hero-font-loading');
@@ -18,6 +18,91 @@ if (document.fonts) {
 }
 </script>
 <script src="script.js" defer></script>
+<script src="home-background.js" defer></script>
+<script src="about-gallery.js" defer></script>
 </head>
-<body class="home dark"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="wordmark" href="index.html">MERTCAN AYDOĞMUŞ</a><nav aria-label="Main navigation"><a href="projects.html" >Projects</a><span aria-hidden="true">/</span><a href="about.html" >About</a><span aria-hidden="true">/</span><a href="mailto:m.aydogmus58@gmail.com">Contact</a></nav></header><main id="main" class="landing"><div class="ambient" aria-hidden="true"></div><div class="hero-title"><p>INDUSTRIAL DESIGN</p><h1>PORTFOLIO<span>.</span></h1><p class="hero-year">2026</p></div><a class="explore-link" href="projects.html" aria-label="Explore projects"><span aria-hidden="true">⌄</span></a></main></body>
+<body class="home dark portfolio-shell">
+<div class="ambient" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="wordmark" href="#home">MERTCAN AYDOĞMUŞ</a>
+  <nav aria-label="Main navigation"><a href="#about">About</a><span aria-hidden="true">/</span><a href="#projects">Projects</a><span aria-hidden="true">/</span><a href="resume.html">Resume</a><span aria-hidden="true">/</span><a href="mailto:m.aydogmus58@gmail.com" data-contact>Contact</a></nav>
+</header>
+<main id="main" class="home-flow">
+  <section id="home" class="landing" aria-labelledby="portfolio-title">
+    <div class="hero-title"><h1 id="portfolio-title">PORTFOLIO<span>.</span></h1><p class="hero-year">2026</p></div>
+    <a class="explore-link" href="#about" aria-label="Scroll to About"><span aria-hidden="true">⌄</span></a>
+  </section>
+  <section id="about" class="about-story home-about wrap" aria-labelledby="hello-title">
+  <section class="about-gallery" aria-label="Personal photographs" aria-roledescription="carousel">
+    <div class="about-photo-frame" tabindex="0" aria-label="Photo gallery">
+        <figure class="about-slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 5" aria-hidden="false">
+          <img class="about-photo" src="assets/about/presentation.webp" width="1147" height="877" alt="Mertcan presenting his XFLARE industrial design graduation project" decoding="async">
+        </figure>
+        <figure class="about-slide is-behind-left" role="group" aria-roledescription="slide" aria-label="2 of 5" aria-hidden="true">
+          <img class="about-photo" src="assets/about/photography.webp" width="1600" height="1066" alt="Mertcan taking a photograph in a historic stone building, with a cat beside him" decoding="async">
+        </figure>
+        <figure class="about-slide is-behind-right" role="group" aria-roledescription="slide" aria-label="3 of 5" aria-hidden="true">
+          <img class="about-photo" src="assets/about/musical.webp" width="1066" height="1600" alt="Mertcan performing in a musical on stage" decoding="async">
+        </figure>
+        <figure class="about-slide" role="group" aria-roledescription="slide" aria-label="4 of 5" aria-hidden="true">
+          <img class="about-photo" src="assets/about/rehearsal.webp" width="1357" height="1063" alt="Mertcan rehearsing a musical with fellow performers" decoding="async">
+        </figure>
+        <figure class="about-slide" role="group" aria-roledescription="slide" aria-label="5 of 5" aria-hidden="true">
+          <img class="about-photo" src="assets/about/backstage.webp" width="1200" height="1315" alt="Mertcan backstage in costume before a musical performance" decoding="async">
+        </figure>
+    </div>
+    <div class="about-gallery-controls" hidden>
+      <button class="gallery-arrow" type="button" data-gallery-previous aria-label="Previous photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg>
+      </button>
+      <div class="gallery-dots" aria-label="Choose a photo">
+        <button type="button" class="gallery-dot is-active" data-gallery-index="0" aria-label="Photo 1: Mertcan presenting his XFLARE industrial design graduation project" aria-current="true"><span></span></button>
+        <button type="button" class="gallery-dot" data-gallery-index="1" aria-label="Photo 2: Mertcan taking a photograph in a historic stone building, with a cat beside him"><span></span></button>
+        <button type="button" class="gallery-dot" data-gallery-index="2" aria-label="Photo 3: Mertcan performing in a musical on stage"><span></span></button>
+        <button type="button" class="gallery-dot" data-gallery-index="3" aria-label="Photo 4: Mertcan rehearsing a musical with fellow performers"><span></span></button>
+        <button type="button" class="gallery-dot" data-gallery-index="4" aria-label="Photo 5: Mertcan backstage in costume before a musical performance"><span></span></button>
+      </div>
+      <button class="gallery-arrow" type="button" data-gallery-next aria-label="Next photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg>
+      </button>
+    </div>
+    <p class="visually-hidden" data-gallery-status role="status" aria-live="polite"></p>
+  </section>
+  <section class="about-copy" aria-labelledby="hello-title">
+    <h2 id="hello-title">HELLO!</h2>
+    <p>I'm Mertcan. When approaching design, I see interfaces not just as clickable screens, but as bridges built between people and technology. I use the analytical perspective from my industrial design background to craft UX/UI experiences that make life easier in the digital world.</p>
+    <p>I want to design AI-driven products that are actually easy for everyday users to navigate. My focus is on turning complex technology into intuitive, frictionless interfaces making human-AI interaction feel natural and effortless</p>
+    <p>When I step away from the design desk, you can catch me stepping onto the stage as an actor and vocalist in musicals, capturing moments through photography, or diving deep into the details of coffee brewing techniques.</p>
+  </section>
+
+  </section>
+  <section id="projects" class="projects-main home-projects wrap" aria-labelledby="projects-title"><div class="projects-intro"><div><h2 id="projects-title">Portfolio Content</h2><p>A cross-section of digital product design, focusing on user experience and mobile interfaces.</p></div><span>04 PROJECTS</span></div><div class="project-grid"><article class="project-card"><a href="commencium.html"><div class="card-image"><img src="assets/card-commencium.png" alt="Commencium app mockup" class="" loading="lazy" decoding="async"></div><div class="card-copy"><h2><span>01</span> Commencium</h2><p>Team Engagement App for Remote Workers</p></div></a></article><article class="project-card"><a href="teddy.html"><div class="card-image"><img src="assets/card-teddy.png" alt="teddy app mockup" class="" loading="lazy" decoding="async"></div><div class="card-copy"><h2><span>02</span> teddy</h2><p>Personal Mental Well-Being App</p></div></a></article><article class="project-card"><a href="metuvation.html"><div class="card-image"><img src="assets/card-metuvation.png" alt="Metuvation app mockup" class="" loading="lazy" decoding="async"></div><div class="card-copy"><h2><span>03</span> Metuvation</h2><p>Facility Reservation and Socialization App for METU</p></div></a></article><article class="project-card"><a href="fintech.html"><div class="card-image"><img src="assets/card-fintech.png" alt="UX Case Study app mockup" class="" loading="lazy" decoding="async"></div><div class="card-copy"><h2><span>04</span> UX Case Study</h2><p>Money Transfer Flow for Commencis</p></div></a></article></div>
+  </section>
+  <section id="resume" class="home-resume wrap" aria-labelledby="resume-title">
+    <div class="resume-summary-intro">
+      <h2 id="resume-title">Resume</h2>
+      <p>Industrial design, digital products, and intuitive user experiences.</p>
+      <a class="text-action" href="resume.html">View full resume <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+    </div>
+    <div class="resume-summary-list">
+      <article class="resume-summary-row"><div><h3>Bachelor of Industrial Design</h3><p>Middle East Technical University</p></div><span>2022 — 2026</span></article>
+      <article class="resume-summary-row"><div><h3>Design Intern</h3><p>Commencis · Future Commencer Programme</p></div><span>2026</span></article>
+      <article class="resume-summary-row"><div><h3>Graduation Project</h3><p>CES Advanced Armour</p></div><span>2026</span></article>
+      <article class="resume-summary-row"><div><h3>Industrial Designer &amp; Intern</h3><p>KUENTA</p></div><span>2025 — 2026</span></article>
+      <article class="resume-summary-row"><div><h3>Design Intern</h3><p>ProDesign</p></div><span>September 2024</span></article>
+      <article class="resume-summary-row"><div><h3>Production Intern</h3><p>FNSS Defense Systems</p></div><span>July 2024</span></article>
+    </div>
+  </section>
+  <section id="contact" class="home-contact wrap" aria-labelledby="contact-title">
+    <h2 id="contact-title">Let’s work together.</h2>
+    <p>For design collaborations or a conversation, say hello.</p>
+    <div class="contact-links">
+      <a class="contact-email" href="mailto:m.aydogmus58@gmail.com" data-contact>m.aydogmus58@gmail.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+      <a class="contact-linkedin" href="https://www.linkedin.com/in/mertcan-aydogmus" target="_blank" rel="noopener noreferrer">LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+    </div>
+  </section>
+</main>
+<footer class="home-footer wrap"><p>© 2026 Mertcan Aydoğmuş</p><a href="#home">Back to top <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6"/></svg></a></footer>
+</body>
 </html>

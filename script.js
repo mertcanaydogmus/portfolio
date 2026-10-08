@@ -1,5 +1,58 @@
 // Navigation remains ordinary HTML links; JavaScript only enhances the experience.
 (() => {
+  // File previews have separate document origins; use the local fade instead.
+  if (location.protocol === 'file:') {
+    document.documentElement.classList.add('file-preview');
+    const transitionStyle = document.createElement('style');
+    transitionStyle.textContent = '@view-transition { navigation: none; }';
+    document.head.append(transitionStyle);
+  }
+  const contactLinks = [...document.querySelectorAll('.site-header nav a[href^="mailto:"], [data-contact]')];
+  if (contactLinks.length && typeof HTMLDialogElement !== 'undefined') {
+    const gmailUrl = new URL('https://mail.google.com/mail/');
+    gmailUrl.search = new URLSearchParams({ view:'cm', fs:'1', to:'m.aydogmus58@gmail.com' }).toString();
+    const dialog = document.createElement('dialog');
+    dialog.id = 'contact-confirmation';
+    dialog.className = 'contact-dialog';
+    dialog.setAttribute('aria-labelledby', 'contact-dialog-title');
+    dialog.setAttribute('aria-describedby', 'contact-dialog-description');
+    dialog.innerHTML = '<h2 id="contact-dialog-title">Open Gmail?</h2><p id="contact-dialog-description">You’ll be taken to Gmail to write an email to me at <span>m.aydogmus58@gmail.com</span>.</p><div class="contact-dialog-actions"><button type="button" data-contact-cancel autofocus>Cancel</button><a data-contact-confirm target="_blank" rel="noopener noreferrer">Open Gmail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>';
+    document.body.append(dialog);
+    const confirm = dialog.querySelector('[data-contact-confirm]');
+    confirm.href = gmailUrl.href;
+    let opener = null;
+    dialog.querySelector('[data-contact-cancel]').addEventListener('click', () => dialog.close());
+    confirm.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('close', () => opener?.focus({ preventScroll:true }));
+    dialog.addEventListener('click', event => {
+      if (event.target !== dialog) return;
+      const box = dialog.getBoundingClientRect();
+      if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close();
+    });
+    contactLinks.forEach(link => {
+      link.setAttribute('aria-haspopup', 'dialog');
+      link.setAttribute('aria-controls', dialog.id);
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        opener = link;
+        dialog.showModal();
+      });
+    });
+  }
+  const homeSections = [...document.querySelectorAll('.home-flow>section[id]')];
+  if (homeSections.length && 'IntersectionObserver' in window) {
+    const homeLinks = [...document.querySelectorAll('.site-header nav a')];
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries.find(entry => entry.isIntersecting);
+      if (!visible) return;
+      document.body.classList.toggle('is-past-hero', visible.target.id !== 'home');
+      homeLinks.forEach(link => {
+        if (link.hash === '#' + visible.target.id || (visible.target.id === 'contact' && link.hasAttribute('data-contact'))) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    }, { rootMargin:'-15% 0px -65% 0px' });
+    homeSections.forEach(section => observer.observe(section));
+  }
   if (document.querySelector('.case-hero')) {
     const backToTop = document.createElement('button');
     backToTop.type = 'button';
