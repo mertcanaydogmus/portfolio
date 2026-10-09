@@ -206,6 +206,7 @@ figcaption { margin-top:12px; font-size:14px; color:var(--muted); }
 .about-slide.is-active { z-index:5; opacity:1; visibility:visible; transform:none; }
 .about-slide.is-leaving { z-index:4; opacity:1; visibility:visible; transform:none; }
 .about-photo { width:100%; height:100%; object-fit:cover; }
+.about-photo-frame > .about-slide:nth-child(-n+3) > .about-photo { transform:scaleX(-1); }
 .about-photo[src$="musical.webp"] { object-position:50% 65%; }
 .about-photo[src$="presentation.webp"] { object-position:80% 50%; }
 .about-photo[src$="backstage.webp"] { object-position:50% 40%; }
