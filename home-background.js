@@ -275,6 +275,8 @@
   window.addEventListener('pagehide',() => { pageActive = false; updatePlayback(); });
   window.addEventListener('pageshow',() => { pageActive = true; updatePlayback(); });
   window.addEventListener('resize',resize,{ passive:true });
+  window.visualViewport?.addEventListener('resize',resize,{ passive:true });
+  window.addEventListener('orientationchange',resize,{ passive:true });
   if ('ResizeObserver' in window) new ResizeObserver(resize).observe(ambient);
   resize();
   updatePlayback();

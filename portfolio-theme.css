@@ -15,6 +15,25 @@
 .portfolio-shell.dark.projects { background:#03050b; }
 .portfolio-shell.dark.projects::before { content:none; }
 .portfolio-shell>.ambient { position:fixed; inset:0; z-index:-1; }
+/* Phone browser chrome can expose space below a bottom-anchored fixed canvas.
+   Use the stable large viewport and fade its light into the page's base colour. */
+@media (max-width:600px), (hover:none) and (pointer:coarse) {
+  .home.portfolio-shell>.ambient {
+    inset:0 0 auto;
+    height:100vh;
+    height:100lvh;
+    min-height:100%;
+    background:#03050b;
+  }
+  .home.portfolio-shell>.ambient::after {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to bottom,#03050b00 74%,#03050b1a 84%,#03050b85 92%,#03050b 100%);
+    pointer-events:none;
+  }
+  .home.portfolio-shell .home-flow>.home-about { border-top:0; }
+}
 .portfolio-shell>.site-header,.portfolio-shell>main { position:relative; z-index:1; }
 .portfolio-shell .site-header nav a[aria-current]::after { transform:scaleX(1); }
 .portfolio-shell .site-header nav span { color:#a0a9c5; }
